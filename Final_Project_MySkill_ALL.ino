@@ -1,7 +1,7 @@
 #define BLYNK_PRINT Serial
-#define BLYNK_TEMPLATE_ID "TMPL6UcqAqiPi"
-#define BLYNK_TEMPLATE_NAME "Ruang 4"
-#define BLYNK_AUTH_TOKEN "0WVpVNr49RtzF-z0IFVADySVtcMQasSu"
+#define BLYNK_TEMPLATE_ID "Template ID"
+#define BLYNK_TEMPLATE_NAME "Template Name"
+#define BLYNK_AUTH_TOKEN "Auth Token"
 
 #include <BlynkSimpleEsp32.h>
 #include <DHT.h>
@@ -49,7 +49,7 @@ void setup() {
   pinMode(green, OUTPUT);
   pinMode(blue, OUTPUT);
   dht.begin();
-  Blynk.begin(BLYNK_AUTH_TOKEN, "POCO M4 Pro", "rrrrrrrr");
+  Blynk.begin(BLYNK_AUTH_TOKEN, "SSID", "Password");
   timer.setInterval(2000L, myTimer);
 
   if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
